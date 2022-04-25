@@ -3,19 +3,24 @@ import React from 'react'
 import styled from 'styled-components'
 import CatImage from '../asset/cat_image.jpg'
 import Button from 'react-bootstrap/Button'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+  const navigate = useNavigate()
+  const handleClickButton = () => {
+    navigate('/question')
+  }
   return (
     <Wrapper>
       <Header>예비집사 판별기</Header>
       <Contents>
         <Title>나에게 맞는 주인님은?</Title>
         <LogoImage>
-          <img src={CatImage} className="rounded-circle" width={350} height={350} />
+          <img src={CatImage} className="rounded-circle" width={350} height={350} alt="고양이 로고" />
         </LogoImage>
         <Desc>MBTI를 기반으로 하는 나랑 잘맞는 고양이 찾기!</Desc>
       </Contents>
-      <Button>테스트 시작하기</Button>
+      <Button style={{ fontFamily: "SimKyungha" }} onClick={handleClickButton}>테스트 시작하기</Button>
     </Wrapper>
   )
 }
@@ -24,6 +29,7 @@ export default Home
 
 const Wrapper = styled.div`
   height: 100vh;
+  font-family: "SimKyungha";
 `
 const Header = styled.div`
   font-size: 40pt;
