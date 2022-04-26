@@ -19,8 +19,8 @@ const Home = () => {
           <img src={CatImage} className="rounded-circle" width={350} height={350} alt="고양이 로고" />
         </LogoImage>
         <Desc>MBTI를 기반으로 하는 나랑 잘맞는 고양이 찾기!</Desc>
+        <Button style={{ fontFamily: "SimKyungha" }} onClick={handleClickButton}>테스트 시작하기</Button>
       </Contents>
-      <Button style={{ fontFamily: "SimKyungha" }} onClick={handleClickButton}>테스트 시작하기</Button>
     </Wrapper>
   )
 }
@@ -35,12 +35,12 @@ const Header = styled.div`
   font-size: 40pt;
   display: flex;
   justify-content: center;
-  align-item: center;
+  align-items: center;
 `
 const Contents = styled.div`
   display: flex;
   justify-content: center;
-  align-item: center;
+  align-items: center;
   flex-direction: column;
 `
 const Title = styled.div`
