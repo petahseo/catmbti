@@ -1,7 +1,6 @@
 import React from 'react'
 // css-in-js
 import styled from 'styled-components'
-import CatImage from '../asset/cat_image.jpg'
 import Button from 'react-bootstrap/Button'
 import { ResultData } from '../asset/data/resultdata'
 import { useNavigate, useSearchParams } from 'react-router-dom'
@@ -30,7 +29,7 @@ const Result = () => {
         <Desc className='text-primary'>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다.</Desc>
         <ButtonGroup>
           <Button style={{ fontFamily: "SimKyungha" }} onClick={() => navigate('/')}>테스트 다시하기</Button>
-          <KakaoShareButton />
+          <KakaoShareButton data={resultData} />
         </ButtonGroup>
       </Contents>
     </Wrapper>
